@@ -477,6 +477,7 @@ app.post('/api/Wepons/strengthWeapons', upload.single('img'), (req, res) => {
     }
 
     console.log(item);
+    strengthWeapons.push(req.body);
     res.status(200).send(item);
 });
 
