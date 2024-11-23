@@ -1,24 +1,27 @@
 {
-  "name": "inclass-backend",
+  "name": "elden-ring-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JacobTipps43/inclass-backend.git"
+    "url": "git+https://github.com/JacobTipps43/elden-ring-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JacobTipps43/inclass-backend/issues"
+    "url": "https://github.com/JacobTipps43/elden-ring-backend/issues"
   },
-  "homepage": "https://github.com/JacobTipps43/inclass-backend#readme",
+  "homepage": "https://github.com/JacobTipps43/elden-ring-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "multer": "^1.4.5-lts.1"
   }
 }
