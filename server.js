@@ -454,9 +454,30 @@ const handleChange = (req, res) => {
 };
 
 app.post('/api/Wepons/strengthWeapons', upload.single('img'), (req, res) => {
-    if(handleChange(req, res)){
-        strengthWeapons.push(req.body);
+    // if(handleChange(req, res)){
+    //     strengthWeapons.push(req.body);
+    // }
+
+    const results = validateItem(req.body);
+
+    if (results.error) {
+        res.status(400).send(results.error.details[0].message);
+        console.log("I have an error")
+        console.log(results.error);
+        return;
     }
+
+    const item = {
+        name: req.body.name,
+        description: req.body.description
+    };
+
+    if (req.file){
+        item.img = "images/Weapons/"+req.file.filename;
+    }
+
+    console.log(item);
+    res.status(200).send(item);
 });
 
 const validateItem = (item) => {
